@@ -1,0 +1,778 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;400;700&family=Poppins:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import "./variables";
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Roboto', sans-serif;
+}
+//? ######################### UTILITY CLASSES ############################
+.container{
+    width: 80vw;
+    margin: auto;
+    background-color: $primary;
+}
+body{
+    background-color: $background;
+}
+//? ######################### HOME DESIGN ############################
+#home{
+    .container{
+        color: $ternary;
+    }
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 25% 100%, 0 80%);
+    display: flex;
+    justify-content: space-between;
+    background-color: $black;
+    margin-top: 5rem;
+    padding: 3rem;
+    padding-bottom: 5rem;
+    .left{
+        display: flex;
+        align-items: center;
+        .imgBox{
+            img{
+                border-radius: 50%;
+                width: 120px;
+                height: 120px;
+                filter: grayscale(100%);
+            }
+        }
+        .textBox{
+            padding-left: 2rem;
+            .cd-headline.loading-bar .cd-words-wrapper::after {
+                background: linear-gradient(to right, $secondary, $success);
+            }
+            h1{
+                color: $fade;
+                font-size: 2rem;
+            }
+            P{
+                span{
+                    b{
+                        color: $ternary;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+    .right{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: $ternary;
+        margin-right: 10rem;
+        .phone{
+            display: flex;
+            align-items: center;
+            i{
+                font-size: 2.5rem;
+                padding-right: .5rem;
+            }
+            b{
+                font-size: 1.5rem;
+            }
+            p{
+                font-size: 1.5rem;
+            }
+        }
+        .email{
+            display: flex;
+            align-items: center;
+            margin-bottom: .5rem;
+            i{
+                font-size: 2.5rem;
+                padding-right: .5rem;
+            }
+            b{
+                font-size: 1.5rem;
+            }
+            p{
+                font-size: 1.5rem;
+            }
+        }
+        .icons{
+            a{
+                i{
+                    color: white;
+                    font-size: 3rem;
+                    margin-right: 1rem;
+                    border-radius: 50%;
+                    padding-bottom: .8rem;
+                    padding-right: .8rem;
+                    padding-left: .8rem;
+                }
+                .uil-facebook{
+                    background-color: $secondary;
+                }
+                .uil-dribbble{
+                    background-color: #ff5da0;
+                }
+                .uil-twitter{
+                    background-color: #4ac7ec;;
+                }
+            }
+        }
+    }
+}
+//? ######################### ABOUT US DESIGN ############################
+#about{
+    .container{
+        padding-left: 4rem;
+        h1{
+            font-size: 2rem;
+            position: relative;
+            color: $heaven;
+            line-height: 1rem;
+            font-weight: 400;
+            padding-top: 3rem;
+            margin-bottom: 2rem;
+            &::after{
+                content: '';
+                height: 3px;
+                width: 80px;
+                position: absolute;
+                top: 50px;
+                left:0;
+                border: 1px dotted $danger;
+            }
+        }
+        .box{
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 7rem;
+            .left{
+                padding-right: 5rem;
+                width: 40vw;
+                h2{
+                    font-size: 2rem;
+                    color: $secondary;
+                    padding-bottom: 1rem;
+                    padding-top: 1rem;
+                }
+                p{
+                    font-size: 1.5rem;
+                    line-height: 1.5rem;
+                    letter-spacing: .01rem;
+                }
+            }
+            .right{
+                display: flex;
+                justify-content: center;
+                align-items: left;
+                flex-direction: column;
+                width: 40vw;
+                p{
+                    font-size: 2.5rem;
+                    color: $ternary;
+                    letter-spacing: 0.1px;
+                }
+            }
+        }
+    }
+}
+//? ######################### EDUCATION DESIGN ############################
+#education{
+    .container{
+        padding-left: 4rem;
+        h1{
+            font-size: 2rem;
+            position: relative;
+            color: $heaven;
+            line-height: 1rem;
+            font-weight: 400;
+            padding-top: 3rem;
+            margin-bottom: 2rem;
+            &::after{
+                content: '';
+                height: 3px;
+                width: 80px;
+                position: absolute;
+                top: 50px;
+                left:0;
+                border: 1px dotted $danger;
+            }
+        }
+        .box{
+            display: flex;
+            flex-direction: row;
+            .left{
+                display: flex;
+                justify-content: space-between;
+                width: 30vw;
+                .smBox{
+                    .iconBox{
+                        i{
+                            font-size: 10rem;
+                            color: $fade;
+                        }
+                        h2{
+                            font-size: 2rem;
+                            color: $fade;
+                        }
+                        margin-bottom: 2rem;
+                    }
+                    .textBox{
+                        padding-bottom: 3rem;
+                        border-left: 1px dotted $fade;
+                        padding-left: 2rem;
+                        p{
+                            color: $fade;
+                            font-size: 1.3rem;
+                            padding: 1rem 0em;
+                        }
+                        h2{
+                            color: $ternary;
+                            font-size: 1.5rem;
+                            font-weight: 400;
+                            line-height: 1rem;
+                            position: relative;
+                            &::before{
+                                content: "";
+                                position: absolute;
+                                border-radius: 50%;
+                                border: 2px solid $secondary;
+                                background-color: $secondary;
+                                width: 10px;
+                                height: 10px;
+                                left: -25.5px;
+                            }
+                        }
+                        h3{
+                            color: $ternary;
+                            font-size: 1.5rem;
+                            font-weight: 400;
+                            line-height: 2rem;
+                        }
+                    }
+                }
+            }
+            .right{
+                width: 20vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 10rem;
+                margin-bottom: 10rem;
+                .smBox{
+                    .textBox{
+                        padding-bottom: 3rem;
+                        h3{
+                            font-size: 1.5rem;
+                            font-weight: 500;
+                            padding-bottom: 1rem;
+                        }
+                        .progress__wrapper{
+                            box-shadow: 0px 0px 1px 0.25px $primary;
+                            width: 250%;
+                            height: 6px;
+                            border: 1px solid $secondary;
+                            border-radius: 10px;
+                            .progress__bar{
+                                transition: ease-in-out 1s all;
+                                display: block;
+                                width: 0;
+                                background-color: $secondary;
+                                height: 100%;
+                                position: relative;
+                            }
+                            .toolTip{
+                                font-size: 1.5rem;
+                                position: absolute;
+                                right: -15px;
+                                top: -30px;
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+    }
+}
+//? ######################### TESTIMONIALS DESIGN ############################
+#testimonials{
+    .container{
+        display: flex;
+        padding-left: 3rem;
+        background-color: $testimonials;
+        .box{
+            width: 30vw;
+            display: flex;
+            align-items: center;
+            .imgBox{
+                i{
+                    font-size: 10rem;
+                }
+                .uil-cell{
+                    color: $yellow;
+                }
+                .uil-smile{
+                    color: $success;
+                }
+                .uil-trophy{
+                    color: $danger;
+                }
+            }
+            .textBox{
+                padding-top: 2.5rem;
+                font-size: 2.5rem;
+                p{
+                    font-weight: 600;
+                }
+                h2{
+                    span{
+                        font-size: 3rem;
+                    }
+                    font-size: 3rem;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+//? ######################### CONTACT ME DESIGN ############################
+#contact{
+    .container{
+        background-color: $primary;
+        padding-left: 4rem;
+        flex-direction: column;
+        h1{
+            font-size: 2rem;
+            position: relative;
+            color: $heaven;
+            line-height: 1rem;
+            font-weight: 400;
+            padding-top: 3rem;
+            margin-bottom: 2rem;
+            &::after{
+                content: '';
+                height: 3px;
+                width: 80px;
+                position: absolute;
+                top: 50px;
+                left:0;
+                border: 1px dotted $danger;
+            }
+        }
+        .box{
+            display: flex;
+            justify-content: space-between;
+            .left{
+                .smBox{
+                    display: flex;
+                    i{
+                        font-size: 5rem;
+                        color: $secondary;
+                        padding-top: 1rem;
+                        padding-right: 1rem;
+                    }
+                    .textBox{
+                        h4{
+                            color: $fade;
+                            padding-bottom: 1rem;
+                        }
+                        p{
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+            .right{
+                form{
+                    margin-left: 15rem;
+                    .smBox{
+                        display: flex;
+                        label{
+                            font-size: 1.6rem;
+                            color: $ternary;
+                            margin-bottom: 1rem;
+                            display: block;
+                        }
+                        .name{
+                            margin-right: 3rem;
+                        }
+                        input{
+                            font-size: 2rem;
+                            background-color: $primary;
+                            border: $fade 1px solid;
+                            color: $ternary;
+                            outline: none;
+                            &:hover{
+                                border: 1px solid $secondary;
+                            }
+                            &:focus{
+                                border: 1px solid $secondary;
+                            }
+                        }
+                    }
+                    .msg{
+                        label{
+                            font-size: 1.6rem;
+                            color: $ternary;
+                            margin-bottom: 1rem;
+                            display: block;
+                            margin-top: 1rem;
+                        }
+                        textarea{
+                            width: 100%;
+                            height: 10vh;
+                            background-color: $primary;
+                            border: $fade 1px solid;
+                            color: $ternary;
+                            outline: none;
+                            font-size: 2srem;
+                            &:hover{
+                                border: 1px solid $secondary;
+                            }
+                            &:focus{
+                                border: 1px solid $secondary;
+                            }
+                        }
+                    }
+                    button{
+                        background-color: $secondary;
+                        font-size: 1.5rem;
+                        margin-top: 2rem;
+                        border-radius: 3px;
+                        color: $heaven;
+                        border: none;
+                        outline: none;
+                        padding: 1rem 2rem;
+                        &:hover{
+                            background-color: #2344a1;
+                        }
+                    }
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+    }
+}
+//? ######################### FOOTER DESIGN ############################
+#footer{
+    .container{
+        text-align: center;
+        h1{
+            font-weight: 400;
+            font-size: 1.8rem;
+            background-color: $footer;
+            padding: 2rem;
+        }
+    }
+}
+//? ######################### LANGUAGES DESIGN ############################
+#langs{
+    .container{
+        justify-content: space-between;
+        background-color: $primary;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+//? ######################### PORTFOLIO DESIGN ############################
+#portfolio{
+    h1{
+        font-size: 2rem;
+        position: relative;
+        color: $heaven;
+        line-height: 1rem;
+        font-weight: 400;
+        padding-top: 3rem;
+        margin-bottom: 2rem;
+        &::after{
+            content: '';
+            height: 3px;
+            width: 80px;
+            position: absolute;
+            top: 50px;
+            left:0;
+            border: 1px dotted $danger;
+        }
+    }
+    .container{
+        display: flex;
+        background-color: $primary;
+        flex-direction: column;
+        padding-bottom: 3rem;
+        .bigBox{
+            display: flex;
+            .left{
+                width: 35vw;
+                padding-right: 3rem;
+                i{
+                    font-size: 5rem;
+                    color: $secondary;
+                    margin-bottom: 2rem;
+                }
+                .box{
+                    justify-content: center;
+                    display: flex;
+                    flex-direction: column;
+                    p{
+                        font-size: 1.5rem;
+                        color: $fade;
+                        text-align: center;
+                        padding: 1rem 1rem;
+                    }
+                    img{
+                        border-radius: 50%;
+                        width: 60px;
+                        height: 60px;
+                        object-fit: cover;
+                        margin-bottom: 2rem;
+                    }
+                    h2{
+                        font-size: 1.5rem;
+                        color: $secondary;
+                        padding-bottom: 1rem;
+                    }
+                    h6{
+                        font-size: 1rem;
+                        margin-bottom: 2rem;
+                    }
+                }
+            }
+            .right{
+                width: 40vw;
+                .tabs{
+                    justify-content: space-between;
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-bottom: 3rem;
+                    a{
+                        font-size: 1.8rem;
+                        padding: 1rem;
+                        color: $fade;
+                        transition: .3s all ease-in-out;
+                    }
+                    .active{
+                        color:$secondary;
+                        border-bottom: 1px solid $secondary;
+                    }
+                }
+                .portfolios{
+                    .item{
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex: 0 0 33.333333%;
+                        max-width: 33.333333%;
+                        a{
+                            img{
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//? ######################### RESPONSIVE DESIGN ############################
+@media(max-width:1120px){
+    #education{
+        .container{
+            .box{
+                .right{
+                    .smBox{
+                        .textBox{
+                            .progress__wrapper{
+                                width: 200%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:900px){
+    #about{
+        .container{
+            padding-left: 0rem;
+
+            h1{
+                margin-left: 5rem;
+            }
+            .box{
+                flex-direction: column;
+                .left{
+                    width: 100%;
+                    padding-bottom: 4rem;
+                    padding: 0rem 5rem;
+
+                }
+                .right{
+                    width: 100%;
+                    padding: 5rem 5rem;
+                }
+            }
+        }
+    }
+}
+@media(max-width:900px){
+    #home{
+        flex-direction: column;
+        .left{
+            margin-bottom: 3rem;
+        }
+        justify-content: center;
+        align-items: center;
+        clip-path: none;
+        .right{
+            margin-right: 0rem;
+        }
+    }
+}
+@media(max-width:800px){
+    #portfolio{
+        .container{
+            padding-left: 0rem;
+            h1{
+                margin-left: 5rem;
+            }
+            .bigBox{
+                flex-direction: column;
+                align-items: center;
+                .left{
+                    padding-right: 0rem;
+                    align-items: center;
+                    justify-content: center;
+                    width: 50vw;
+                }
+                .right{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media(max-width:700px){
+    #testimonials{
+        .container{
+            padding-left: 0rem;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    #education{
+        .container{
+            padding-left: 0rem;
+            h1{
+                margin-left: 5rem;
+            }
+            .box{
+                padding-right: 2rem;
+                padding-left: 2rem;
+                flex-direction: column;
+                .left{
+                    width: 100%;
+                    justify-content: space-around;
+                }
+                .right{
+                    width: 50%;
+                    padding-right: 3rem;
+                }
+            }
+        }
+    }
+    #contact{
+        .container{
+            padding-left: 0rem;
+            .box{
+                flex-direction: column;
+                .right{
+                    form{
+                        margin-left: 0rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:600px){
+    #contact{
+        .container{
+            padding-left: 0rem;
+            .box{
+                flex-direction: column;
+                .right{
+                    form{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:450px){
+    #testimonials{
+        .container{
+            padding-left: 0rem;
+            flex-direction: column;
+            .box{
+                width: 100%;
+            }
+        }
+    }
+    #home{
+        clip-path: none;
+        .left{
+            .imgBox{
+                img{
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+        }
+        .right{
+            .email{
+                b{
+                    font-size: 1.2rem;
+                }
+                p{
+                    font-size: 1rem;
+                    padding-left: .5rem;
+                }
+            }
+        }
+    }
+}
+@media(max-width:375px){
+    #portfolio{
+        .container{
+            padding-left: 0rem;
+            h1{
+                margin-left: 5rem;
+            }
+            .bigBox{
+                flex-direction: column;
+                align-items: center;
+                .left{
+                    padding-right: 0rem;
+                    align-items: center;
+                    justify-content: center;
+                    width: 50vw;
+                }
+                .right{
+                    width: 100%;
+                    .tabs{
+                        a{
+                            font-size: 2rem;
+                            padding-left: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
